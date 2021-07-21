@@ -1,0 +1,9 @@
+server:
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      base-path: /_stats
+      exposure:
+        include: [ "health" ]

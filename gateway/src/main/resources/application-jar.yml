@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: google
+          uri: http://127.0.0.1:8081
+          predicates:
+            - Method=GET
+            - Header=X-Target, google
+        - id: naver
+          uri: http://127.0.0.1:8082
+          predicates:
+            - Method=GET
+            - Header=X-Target, naver
